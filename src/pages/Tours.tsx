@@ -1,11 +1,13 @@
 import NavigationBar from "../components/NavigationBar";
+import { ToursList } from "../components/Tours/ToursList";
 
 export const Tours = () => {
   return (
     <>
       <NavigationBar></NavigationBar>
-      <h1>Our Guided Tours</h1>
-      <main></main>
+      <main>
+        <ToursList />
+      </main>
     </>
   );
 };
