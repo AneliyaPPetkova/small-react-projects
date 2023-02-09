@@ -10,6 +10,9 @@ const NavBar = () => {
           <li>
              <NavLink to="/birthday-reminder">Birthday Reminder</NavLink>
           </li>
+          <li>
+             <NavLink to="/tours">Tours</NavLink>
+          </li>
        </ul>
     </nav>
  );
