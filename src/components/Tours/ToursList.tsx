@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
-import TourCard from "./Tour";
+import TourCard from "./TourCard";
 import { Tour } from "./Types";
 
 const url = "https://course-api.com/react-tours-project";
@@ -34,19 +34,17 @@ export const ToursList = () => {
     );
   } else {
     return (
-      <main>
-        <section className="container">
-          <div className="title">
-            <h1>Our Guided Tours</h1>
-            <div className="underline"></div>
-            <div>
-              {tours.map((tour: Tour) => {
-                return <TourCard key={tour.id} {...tour}></TourCard>;
-              })}
-            </div>
-          </div>
-        </section>
-      </main>
+      <section>
+        <div className="title">
+          <h1>Our Guided Tours</h1>
+          <div className="underline"></div>
+        </div>
+        <div className="tours">
+          {tours.map((tour: Tour) => {
+            return <TourCard key={tour.id} {...tour}></TourCard>;
+          })}
+        </div>
+      </section>
     );
   }
 };
