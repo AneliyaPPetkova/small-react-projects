@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import TourCard from "./TourCard";
-import { Tour } from "./Types";
+import { Tour } from "../../data/Types";
+import { toursApiUrl } from "../../data/constants";
 
-const url = "https://course-api.com/react-tours-project";
 export const ToursList = () => {
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
@@ -12,7 +12,7 @@ export const ToursList = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(url);
+      const response = await fetch(toursApiUrl);
       const tours = await response.json();
       setLoading(false);
       setTours(tours);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Tour } from "./Types";
+import { Tour } from "../../data/Types";
 
 const TourCard = ({ id, name, image, info, price }: Tour) => {
   const [readMore, setReadMore] = useState(false);

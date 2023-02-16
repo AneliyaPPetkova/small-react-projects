@@ -5,3 +5,10 @@ export interface Tour {
   image: string;
   price: string;
 }
+
+export interface Person {
+  id: number;
+  name: string;
+  age: number;
+  image: string;
+}

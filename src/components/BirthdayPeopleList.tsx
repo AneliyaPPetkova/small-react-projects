@@ -1,9 +1,4 @@
-interface Person {
-    id: number;
-    name: string;
-    age: number;
-    image: string;
-}
+import { Person } from "../data/Types"
 
 type BirthdayPeopleListProps = {
     people: Array<Person>;
