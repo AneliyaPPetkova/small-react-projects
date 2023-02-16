@@ -22,6 +22,11 @@ export const ToursList = () => {
     }
   };
 
+  const removeTour = (id: string) => {
+    const newTours = tours.filter((tour: Tour) => tour.id !== id)
+    setTours(newTours);
+  }
+
   useEffect(() => {
     fetchTours();
   }, []);
@@ -41,7 +46,7 @@ export const ToursList = () => {
         </div>
         <div className="tours">
           {tours.map((tour: Tour) => {
-            return <TourCard key={tour.id} {...tour}></TourCard>;
+            return <TourCard key={tour.id} {...tour} removeTour={removeTour}></TourCard>;
           })}
         </div>
       </section>

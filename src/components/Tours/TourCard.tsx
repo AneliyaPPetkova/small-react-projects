@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Tour } from "../../data/Types";
 
-const TourCard = ({ id, name, image, info, price }: Tour) => {
+const TourCard = ({ id, name, image, info, price, removeTour }: Tour) => {
   const [readMore, setReadMore] = useState(false);
   return (
     <article className="single-tour">
@@ -15,7 +15,7 @@ const TourCard = ({ id, name, image, info, price }: Tour) => {
           {readMore ? info : `${info.substring(0, 200)}...`}
           <button onClick={() => setReadMore(!readMore)}>{readMore ? 'Show Less' : 'Show More'}</button>
         </p>
-        <button className="delete-btn">Not interested</button>
+        <button className="delete-btn" onClick={() => removeTour(id)}>Not interested</button>
       </footer>
     </article>
   );

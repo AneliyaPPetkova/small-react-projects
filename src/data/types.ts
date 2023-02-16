@@ -4,6 +4,7 @@ export interface Tour {
   info: string;
   image: string;
   price: string;
+  removeTour: (id: string) => void;
 }
 
 export interface Person {
