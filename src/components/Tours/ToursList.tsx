@@ -23,33 +23,47 @@ export const ToursList = () => {
   };
 
   const removeTour = (id: string) => {
-    const newTours = tours.filter((tour: Tour) => tour.id !== id)
+    const newTours = tours.filter((tour: Tour) => tour.id !== id);
     setTours(newTours);
-  }
+  };
 
   useEffect(() => {
     fetchTours();
   }, []);
 
   if (loading) {
-    return (
-      <main>
-        <Loading />
-      </main>
-    );
-  } else {
+    return <Loading />;
+  }
+  if (tours.length === 0) {
     return (
       <section>
         <div className="title">
-          <h1>Our Guided Tours</h1>
+          <h2>No Guided Tours</h2>
           <div className="underline"></div>
         </div>
-        <div className="tours">
-          {tours.map((tour: Tour) => {
-            return <TourCard key={tour.id} {...tour} removeTour={removeTour}></TourCard>;
-          })}
-        </div>
+        <button className="btn" onClick={fetchTours}>
+          Refresh
+        </button>
       </section>
     );
   }
+  return (
+    <section>
+      <div className="title">
+        <h1>Our Guided Tours</h1>
+        <div className="underline"></div>
+      </div>
+      <div className="tours">
+        {tours.map((tour: Tour) => {
+          return (
+            <TourCard
+              key={tour.id}
+              {...tour}
+              removeTour={removeTour}
+            ></TourCard>
+          );
+        })}
+      </div>
+    </section>
+  );
 };
