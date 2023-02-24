@@ -13,3 +13,11 @@ export interface Person {
   age: number;
   image: string;
 }
+
+export interface Review {
+  id: number;
+  name: string;
+  image: string;
+  job: string;
+  text: string;
+}
