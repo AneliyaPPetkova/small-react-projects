@@ -1,4 +1,4 @@
-import { Person } from "../data/Types"
+import { Person } from "../data/types"
 
 type BirthdayPeopleListProps = {
     people: Array<Person>;
