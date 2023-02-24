@@ -13,7 +13,7 @@ export const BirthdayReminder = () => {
         <section className="container">
           <h3>{people.length} birthdays today</h3>
           <BirthdayPeopleList people={people}></BirthdayPeopleList>
-          <button onClick={() => setPeople([])}>clear all</button>
+          <button className="clear-btn" onClick={() => setPeople([])}>clear all</button>
         </section>
       </main>
     </>

@@ -1,0 +1,62 @@
+@use "_variables.scss" as variables;
+
+/*
+=============== 
+Birthday Reminder
+===============
+*/
+
+.container {
+    width: 90vw;
+    max-width: variables.$fixed-width;
+    background: variables.$clr-white;
+    border-radius: variables.$radius;
+    padding: 1.5rem 2rem;
+    box-shadow: variables.$dark-shadow;
+
+    .clear-btn {
+        color: variables.$clr-white;
+        display: block;
+        width: 100%;
+        border-color: transparent;
+        background: variables.$clr-pink;
+        margin: 2rem auto 0 auto;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        letter-spacing: variables.$spacing;
+        border-radius: variables.$radius;
+        outline: 1px solid rgba(242, 138, 178, 0.8);
+        cursor: pointer;
+    }
+}
+
+.container h3 {
+    font-weight: normal;
+    text-transform: none;
+    margin-bottom: 2rem;
+}
+
+.person {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.person img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: variables.$light-shadow;
+}
+
+.person h4 {
+    margin-bottom: 0;
+}
+
+.person p {
+    margin: 0;
+}

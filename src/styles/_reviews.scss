@@ -1,0 +1,116 @@
+@use "_variables.scss" as variables;
+
+/*
+=============== 
+Start Reviews
+===============
+*/
+
+.review {
+    background: variables.$clr-white;
+    padding: 1.5rem 2rem;
+    border-radius: variables.$radius;
+    box-shadow: variables.$light-shadow;
+    transition: variables.$transition;
+    text-align: center;
+  
+    &:hover {
+      box-shadow: variables.$dark-shadow;
+    }
+  
+    .img-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+  
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: variables.$clr-primary-5;
+        position: absolute;
+        top: -0.25rem;
+        right: -0.5rem;
+        border-radius: 50%;
+      }
+    }
+  
+    .person-img {
+      width: 100%;
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      position: relative;
+    }
+  
+    .quote-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      transform: translateY(25%);
+      background: variables.$clr-primary-5;
+      color: variables.$clr-white;
+    }
+  
+    .author {
+      margin-bottom: 0.25rem;
+    }
+  
+    .job {
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      color: variables.$clr-primary-5;
+      font-size: 0.85rem;
+    }
+  
+    .info {
+      margin-bottom: 0.75rem;
+    }
+  
+    .prev-btn,
+    .next-btn {
+      color: variables.$clr-primary-7;
+      font-size: 1.25rem;
+      background: transparent;
+      border-color: transparent;
+      margin: 0 0.5rem;
+      transition: variables.$transition;
+      cursor: pointer;
+  
+      &:hover {
+        color: variables.$clr-primary-5;
+      }
+    }
+  
+    .random-btn {
+      margin-top: 0.5rem;
+      background: variables.$clr-primary-9;
+      color: variables.$clr-primary-5;
+      padding: 0.25rem 0.5rem;
+      text-transform: capitalize;
+      border-radius: variables.$radius;
+      transition: variables.$transition;
+      border-color: transparent;
+      cursor: pointer;
+  
+      :hover {
+        background: variables.$clr-primary-5;
+        color: variables.$clr-primary-1;
+      }
+    }
+  }
+  
+  /*
+  =============== 
+  End Reviews
+  ===============
+  */
