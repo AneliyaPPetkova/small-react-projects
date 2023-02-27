@@ -21,3 +21,9 @@ export interface Review {
   job: string;
   text: string;
 }
+
+export interface FAQ {
+  id: number;
+  title: string;
+  info: string;
+}
