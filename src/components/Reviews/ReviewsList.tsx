@@ -12,32 +12,34 @@ export const ReviewsList = () => {
 
     return tempIndex;
   };
-  
+
+  const randomIndex = (currentIndex: number) => {
+    let randomNumber: number;
+
+    do {
+      randomNumber = Math.floor(Math.random() * reviews.length);
+    } while (randomNumber === currentIndex);
+
+    return randomNumber;
+  };
+
   const prevReview = () => {
-    setIndex((index) => {
-      return checkIndex(index - 1);
+    setIndex((i) => {
+      return checkIndex(i - 1);
     });
   };
 
   const nextReview = () => {
-    setIndex((index) => {
-      return checkIndex(index + 1);
+    setIndex((i) => {
+      return checkIndex(i + 1);
     });
   };
 
   const randomReview = () => {
-    setIndex(() => {
-      return getRandomIndex();
+    setIndex((i) => {
+      return randomIndex(i);
     });
   };
-
-  function getRandomIndex() {
-    let randomNumber = Math.floor(Math.random() * reviews.length);
-    while (randomNumber === index) {
-      randomNumber = Math.floor(Math.random() * reviews.length);
-    }
-    return randomNumber;
-  }
 
   return (
     <article className="reviews">
