@@ -27,3 +27,17 @@ export interface FAQ {
   title: string;
   info: string;
 }
+
+export interface Category {
+  id: number;
+  title: string;
+}
+
+export interface MenuItem {
+  id: number;
+  title: string;
+  category: string;
+  price: number;
+  img: string;
+  desc: string;
+}
