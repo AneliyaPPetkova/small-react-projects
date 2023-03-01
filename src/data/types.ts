@@ -41,3 +41,12 @@ export interface MenuItem {
   img: string;
   desc: string;
 }
+
+export interface Job {
+  id: number;
+  order: number;
+  title: string;
+  dates: string;
+  duties: string[];
+  company: string;
+}

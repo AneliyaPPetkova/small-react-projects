@@ -8,7 +8,7 @@ export const Jobs = () => {
       <main>
         <section className="tabs">
           <div className="title">
-            <h1>Jobs</h1>
+            <h1>Job Experience</h1>
             <div className="underline"></div>
           </div>
           <JobsList />

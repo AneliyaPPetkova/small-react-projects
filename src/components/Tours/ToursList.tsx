@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import TourCard from "./TourCard";
-import { Tour } from "../../data/Types";
+import { Tour } from "../../data/types";
 import { toursApiUrl } from "../../data/constants";
 
 export const ToursList = () => {
