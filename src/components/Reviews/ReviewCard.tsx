@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
-import { Review } from "../../data/Types";
+import { Review } from "../../data/types";
 
 export const ReviewCard = ({ id, name, image, job, text }: Review) => {
   return (
